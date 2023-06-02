@@ -12,6 +12,11 @@ describe Solver do
         solver = Solver.new
         expect{results = solver.factorial(-1)}.to raise_error(ArgumentError)
     end
+    it 'returns 1 if integer is 0' do
+        solver= Solver.new
+        results= solver.factorial(0)
+        expect(results).to eq(1)
+    end
 
  end
 
