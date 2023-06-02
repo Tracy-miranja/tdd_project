@@ -17,6 +17,14 @@ describe Solver do
         results= solver.factorial(0)
         expect(results).to eq(1)
     end
+    describe '#reverse' do
+    it 'returns reverse of a string' do
+        string = Solver.new
+        results = string.reverse('hello')
+        expect(results).to eq('olleh')
+    end
+
+ end
 
  end
 
