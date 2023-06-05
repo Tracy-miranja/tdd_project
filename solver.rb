@@ -1,30 +1,31 @@
 class Solver
-  def factorial(n)
-    raise ArgumentError, 'input should not be a negative integer' if n.negative?
-     results =1
-    if n.zero?
-      results=1
+  def factorial(num)
+    raise ArgumentError, 'input should not be a negative integer' if num.negative?
+
+    results = 1
+    if num.zero?
+      results = 1
     else
-      (1...n).each do |int|
-      results *=int
+      (1...num).each do |int|
+        results *= int
+      end
     end
-  end
-     results
+    results
   end
 
   def reverse(string)
-      string.reverse
+    string.reverse
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
-        'fizzbuzz'
-    elsif n % 3 == 0
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
       'fizz'
-    elsif n % 5 == 0
+    elsif (num % 5).zero?
       'buzz'
     else
-      n.to_s
+      num.to_s
     end
   end
 end

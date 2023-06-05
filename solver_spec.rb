@@ -1,31 +1,31 @@
-require_relative './solver.rb'
+require_relative './solver'
 require 'rspec'
 
 describe Solver do
   describe '#factorial' do
-    it 'takes an integer "n" and returns factorial of positive integer' do
+    it 'takes an integer "num" and returns factorial of positive integer' do
       solver = Solver.new
-      results=solver.factorial(5)
+      results = solver.factorial(5)
       expect(results).to eq(24)
     end
 
     it 'retuns an error if the interger is negative' do
       solver = Solver.new
-      expect{results = solver.factorial(-1)}.to raise_error(ArgumentError)
+      expect { solver.factorial(-1) }.to raise_error(ArgumentError)
     end
 
     it 'returns 1 if integer is 0' do
-      solver= Solver.new
-      results= solver.factorial(0)
+      solver = Solver.new
+      results = solver.factorial(0)
       expect(results).to eq(1)
     end
   end
 
   describe '#reverse' do
     it 'returns reverse of a string' do
-        string = Solver.new
-        results = string.reverse('hello')
-        expect(results).to eq('olleh')
+      string = Solver.new
+      results = string.reverse('hello')
+      expect(results).to eq('olleh')
     end
   end
 
@@ -54,4 +54,4 @@ describe Solver do
       expect(result).to eq('7')
     end
   end
-end 
+end
